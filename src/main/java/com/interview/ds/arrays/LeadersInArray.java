@@ -25,6 +25,6 @@ public class LeadersInArray {
         }
 
 
-        return res.toArray(new Integer[res.size()]);
+        return res.toArray(new Integer[0]);
     }
 }
