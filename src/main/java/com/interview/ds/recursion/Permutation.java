@@ -10,6 +10,7 @@ public class Permutation {
         System.out.println(permutationCount("abc", ""));
     }
 
+    //pull first char from unprocessed string and put that character at all places in processed string
     private static List<String> permutation(String s, String ans){
         List<String> result = new ArrayList<>();
         if(s.length() == 0){

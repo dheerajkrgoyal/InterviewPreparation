@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
-Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order.
+Given an array of distinct integers candidates and a target integer target, return a list of all unique
+combinations of candidates where the chosen numbers sum to target.
+You may return the combinations in any order.
 
-The same number may be chosen from candidates an unlimited number of times. Two combinations are unique if the
-frequency of at least one of the chosen numbers is different.
+The same number may be chosen from candidates an unlimited number of times.
+Two combinations are unique if the frequency of at least one of the chosen numbers is different.
 
 Example 1:
 
@@ -38,6 +40,7 @@ public class CombinationSum {
         System.out.println(combinationSum(arr, target, 0, 0, new ArrayList<>()));
     }
 
+    //non-tail recursion
     private static List<List<Integer>> combinationSum(int[] arr, int target, int index, int sum, List<Integer> ans){
         List<List<Integer>> result = new ArrayList<>();
         if(index==arr.length){

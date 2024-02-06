@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /*
-Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in
-candidates where the candidate numbers sum to target.
+Given a collection of candidate numbers (candidates) and a target number (target),
+find all unique combinations in candidates where the candidate numbers sum to target.
 
 Each number in candidates may only be used once in the combination.
 
@@ -40,6 +40,7 @@ public class CombinationSumII {
         System.out.println(combinationSum2(arr, target, 0, 0, new ArrayList<>()));
     }
 
+    //non-tail recursion
     private static List<List<Integer>> combinationSum2(int[] arr, int target, int i, int sum, List<Integer> ans){
         List<List<Integer>> result = new ArrayList<>();
         if(i == arr.length){

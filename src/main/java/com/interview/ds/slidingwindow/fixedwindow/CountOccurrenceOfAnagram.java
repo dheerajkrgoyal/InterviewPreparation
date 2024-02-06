@@ -8,6 +8,49 @@ public class CountOccurrenceOfAnagram {
         String txt = "forxxorfxdofr";
         String pat = "for";
         System.out.println(search(txt, pat));
+        System.out.println(search2(txt, pat));
+    }
+
+    private static int search2(String txt, String pat){
+        int left = 0;
+        int right = 0;
+        int res = 0;
+        //create a map of pattern
+        Map<Character, Integer> map = createDictionary(pat);
+        //maintain count of unique chars
+        int count = map.size();
+        while(right<txt.length()){
+            char c = txt.charAt(right);
+            //check if char is in map if yes decrease the count, when no of char become zero decrease count
+            if(map.containsKey(c)){
+                map.put(c, map.get(c) -1);
+                if(map.get(c) == 0){
+                    map.remove(c);
+                    count--;
+                }
+            }
+            //if window size is greater than required which is pat.length()
+            //decrease the window size by removing char from left
+            //while removing char from check if it belongs to pattern or not if it does add back in
+            // pattern map
+            while(right-left+1>pat.length()){
+                char cl = txt.charAt(left);
+                if(pat.indexOf(cl) != -1){
+                    map.put(cl, map.getOrDefault(cl, 0) +1);
+                    if(map.get(cl) == 1){
+                        count++;
+                    }
+                }
+                left++;
+            }
+
+            //if window size is exactly the pattern length(required) and count == 0(meaning all characters of pattern are there)
+            if(right-left+1 == pat.length() && count  == 0){
+                res++;
+            }
+            right++;
+        }
+        return res;
     }
 
     private static int search(String txt, String pat){

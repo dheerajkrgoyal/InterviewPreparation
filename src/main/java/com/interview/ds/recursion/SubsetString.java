@@ -10,13 +10,12 @@ public class SubsetString {
     }
 
     private static List<String> subset(String str, String ans){
+        List<String> result = new ArrayList<>();
         if(str.isEmpty()) {
-            List<String> result = new ArrayList<>();
             result.add(ans);
             return result;
         }
 
-        List<String> result = new ArrayList<>();
         result.addAll(subset(str.substring(1), ans));
         result.addAll(subset(str.substring(1), ans+str.charAt(0)));
         return result;

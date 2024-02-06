@@ -34,7 +34,10 @@ public class Subset {
             return result;
         }
 
+        //dont-pick
         result.addAll(subset(arr, i+1, currentList));
+
+        //pick
         currentList.add(arr[i]);
         result.addAll(subset(arr, i+1, currentList));
         currentList.remove(currentList.size()-1); //backtracking for subsequent recursions

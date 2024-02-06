@@ -36,6 +36,7 @@ public class Combination {
         return result;
     }
 
+    //tail-recursion
     private static void comb(int i, int n, int k, List<Integer> ans, List<List<Integer>> result){
         if(k==0){
             result.add(new ArrayList<>(ans));

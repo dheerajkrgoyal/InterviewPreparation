@@ -4,10 +4,13 @@ import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
 
+
+//Stack and Queue question
+//ver common in interviews
 public class MaximumOfSubArraysSizeK {
     public static void main(String[] args) {
-        int[] arr = new int[]{1, 3, -1, -3, 5, 3, 6, 7};
-        int k = 3;
+        int[] arr = new int[]{-7,-8,7,5,7,1,6,0};
+        int k = 4;
         System.out.println(Arrays.toString(maximum(arr, k)));
     }
 
@@ -19,7 +22,7 @@ public class MaximumOfSubArraysSizeK {
         Deque<Integer> dq = new ArrayDeque<>();
         int i = 0;
         while(right<arr.length){
-            while(!dq.isEmpty() && dq.peekLast()<=arr[right]){
+            while(!dq.isEmpty() && dq.peekLast()<arr[right]){
                 dq.pollLast();
             }
             dq.offer(arr[right]);

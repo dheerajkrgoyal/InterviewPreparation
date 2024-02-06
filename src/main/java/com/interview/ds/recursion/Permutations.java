@@ -30,7 +30,8 @@ public class Permutations {
         return result;
     }
 
-    //2nd approach pick each char of a given string and place it in 1st position and generate all ans string
+    //2nd approach pick each char of a given string and place it in 1st position and generate all
+    // ans string
     private static List<String> permutation2(String str, boolean[] freq, String ans){
         List<String> result = new ArrayList<>();
         if(ans.length() == str.length()){
@@ -49,7 +50,7 @@ public class Permutations {
         return result;
     }
 
-    //3rd approach, similar as 2nd approach but instead of using boolean map, we use swap and indices
+    //3rd approach, similara as 2nd approach but instead of using boolean map, we use swap and indices
     //abc -> abc, bac, cba swap 1st index with every other index character
     //swap 2nd index with every other greater index
     private static List<String> permutation3(String str, int i){
