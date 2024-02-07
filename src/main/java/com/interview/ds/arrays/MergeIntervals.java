@@ -2,7 +2,6 @@ package com.interview.ds.arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
 
@@ -14,7 +13,7 @@ public class MergeIntervals {
 
     private static int[][] merge(int[][] intervals){
         List<int[]> res = new ArrayList<>();
-        Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
+        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
         for (int[] interval : intervals) {
             if (res.size() == 0 || res.get(res.size() - 1)[1] < interval[0]) {
                 res.add(interval);

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+//task is to find all leaders
 //leader is element whose all the right elements are smaller
 public class LeadersInArray {
     public static void main(String[] args) {

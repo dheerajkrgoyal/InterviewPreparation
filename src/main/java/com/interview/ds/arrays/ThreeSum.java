@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-//Find all the triplets in array which sums to zero
+//Find all the unique triplets in array which sums to zero
 public class ThreeSum {
     public static void main(String[] args) {
         int[] nums = new int[]{-3, 0, 1, 2, -1, 1, -2};
@@ -15,8 +15,10 @@ public class ThreeSum {
     private static List<List<Integer>> sum3(int[] arr){
         List<List<Integer>> triplets = new ArrayList<>();
 
+        //sort the array so that you can skip the duplicates
         Arrays.sort(arr);
         for(int i = 0; i<arr.length; i++){
+            //when i >0 check if you used that i for same value then skip it
             if(i>0 && arr[i] == arr[i-1]){
                 continue;
             }
@@ -34,6 +36,7 @@ public class ThreeSum {
                     triplets.add(Arrays.asList(arr[i], arr[left], arr[right]));
                     left++;
                     right--;
+                    //keep on skipping j and k similarly like i so that you dont get same triplet
                     while(left<right && arr[left]==arr[left-1]){
                         left++;
                     }

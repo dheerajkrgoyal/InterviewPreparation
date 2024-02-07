@@ -11,7 +11,7 @@ public class MajorityElementII {
     }
 
     /**
-     * At max there can be 2 elements whose frequency is n/3 in any array
+     * At max there can be 2 elements whose frequency is greater than floor of n/3 in any array
      * Very well we can do it using frequency map which will take extra o(n) space.
      * but we can also do it using moore's voting algorithm since we already know there can be at max 2 element
      * just slight vary the algo
