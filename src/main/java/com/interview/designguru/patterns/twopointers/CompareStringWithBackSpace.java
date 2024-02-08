@@ -1,4 +1,4 @@
-package com.interview.patterns.twopointers;
+package com.interview.designguru.patterns.twopointers;
 
 import java.util.Stack;
 

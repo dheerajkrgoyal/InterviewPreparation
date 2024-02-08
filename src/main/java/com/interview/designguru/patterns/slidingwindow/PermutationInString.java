@@ -1,8 +1,12 @@
-package com.interview.patterns.slidingwindow;
+package com.interview.designguru.patterns.slidingwindow;
 
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Or Anagram in string.
+ * the character frequency of pattern should match the sliding windows
+ */
 public class PermutationInString {
     public static void main(String[] args) {
         System.out.println(findPermutation("aaacb", "abc"));
