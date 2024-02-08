@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 /**
  * return index of the peak element.
- * peak element is the element that is greater than both of its neighbors. assume arr[-1] and arr[n] is negative
- * infinity. there can be multiple peaks, return any one.
+ * peak element is the element that is greater than both of its neighbors. assume arr[-1] and arr[n]
+ * is negative infinity. there can be multiple peaks, return any one.
  */
 public class PeakElement {
     public static void main(String[] args) {
@@ -56,10 +56,10 @@ public class PeakElement {
      * assume all index out of bound element is -1;
      *
      * scan each column, find the max in the mid-column. and check left and right.
-     * we do not check top and bottom because we pick max value of that colum so it is bound to be greater
-     * than top and bottom.
-     * if that value is greater than left and right we found the peak element or else, we move towards greater
-     * value
+     * we do not check top and bottom because we pick max value of that column so it is bound to be
+     * greater than top and bottom.
+     * if that value is greater than left and right we found the peak element or else, we move
+     * towards greater value
      * @param mat
      * @return
      */

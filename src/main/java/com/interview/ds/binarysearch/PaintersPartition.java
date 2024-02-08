@@ -1,10 +1,11 @@
 package com.interview.ds.binarysearch;
 
 /**
- * given an arr represents board and each element represents the length of each board. some k painters are given
- * to paint these boards. consider each unit of board takes 1 unit of time to paint.
- * you are supposed to return the minimum time to get this job done of painting all the boards under a constraint
- * that any painter will only paint the continuous sections of the board.
+ * given an arr represents board and each element represents the length of each board.
+ * some k painters are given to paint these boards. consider each unit of board takes 1 unit of
+ * time to paint. you are supposed to return the minimum time to get this job done of painting
+ * all the boards under a constraint that any painter will only paint the continuous sections of
+ * the board.
  *
  * similar problem : split array such that largest sum of the sub-array is minimised.
  */

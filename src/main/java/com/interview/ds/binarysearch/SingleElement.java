@@ -11,10 +11,10 @@ public class SingleElement {
 
     /**
      * let us say we have array [1,1,2,2,4,5,5]
-     * if we observe the index of the elements all elements index before single element is even, odd
-     * and after single element is odd, even. we will use this observation to discard the one half of the array
-     * if we do not find single element in the mid. for the mid to be a single element index before it and index
-     * after it should not be same;
+     * if we observe the index of the elements  before single element is [even, odd]
+     * and after single element is [odd, even]. we will use this observation to discard the one half of
+     * the array if we do not find single element in the mid. for the mid to be a single element index
+     * before it and index after it should not be same;
      *
      * @param arr
      * @return

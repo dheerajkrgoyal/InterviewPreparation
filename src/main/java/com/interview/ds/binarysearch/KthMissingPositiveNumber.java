@@ -13,7 +13,7 @@ package com.interview.ds.binarysearch;
  * when low and high crosses, high will be at 7(index 2);
  * since 4 values are missing at index 2, we need to find +2 nos.
  * which is 7+2 = 9;
- * in formula arr[high] + (k-missing)
+ * in formula arr[high] + (k-missing at high index)
  * arr[high] + (k - (arr[high]-(high+1)))
  * arr[high] + k - arr[high] + high + 1
  * return k+ high+ 1
@@ -28,11 +28,14 @@ public class KthMissingPositiveNumber {
     }
 
     public static int missingK(int[] vec, int n, int k) {
-        // Write your code here.
+        //index low = 0 high= arr.length-1
         int low = 0;
         int high = n-1;
         while(low<=high){
             int mid = low + (high-low)/2;
+
+            //find how many nos. are missing at mid index
+            //if it is less than k we move low or else move high
             if(vec[mid]-(mid+1)<k){
                 low = mid+1;
             }
@@ -41,6 +44,7 @@ public class KthMissingPositiveNumber {
             }
         }
 
+        //once high crosses low missing no is high+1+k
         return k+ high + 1;
     }
 }

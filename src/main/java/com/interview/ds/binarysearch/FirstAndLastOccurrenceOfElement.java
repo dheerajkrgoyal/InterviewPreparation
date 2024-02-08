@@ -3,9 +3,9 @@ package com.interview.ds.binarysearch;
 import java.util.Arrays;
 
 /**
- * to find the first occurrence, once we find the element, we keep on pushing to left to see where can we push
- * the boundary, similarly to fin the last occurrence we keep on pushing to the right to see where we can push the
- * boundary.
+ * to find the first occurrence, once we find the element, we keep on pushing to left to see where
+ * can we push the boundary, similarly to find the last occurrence we keep on pushing to the
+ * right to see where we can push the boundary.
  *
  * These questions can come in many form like
  * implement lower bound

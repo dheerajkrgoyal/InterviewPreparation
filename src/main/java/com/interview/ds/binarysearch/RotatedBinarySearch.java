@@ -49,6 +49,14 @@ public class RotatedBinarySearch {
         return -1;
     }
 
+    /**
+     * only difference is if mid, low and high has same value which is not equal to the target
+     * we trim down the search space until they become different, we increase the low and
+     * decrease the high.
+     * @param arr
+     * @param x
+     * @return
+     */
     private static boolean searchWithDuplicates(int[] arr, int x){
         int low = 0;
         int high = arr.length-1;
@@ -83,6 +91,12 @@ public class RotatedBinarySearch {
         return false;
     }
 
+    /**
+     * we check which part is sorted if left is sorted meaning a[low]<=a[mid] then a[low] can be min
+     * if right is sorted then a[mid] could be min
+     * @param arr
+     * @return
+     */
     private static int findMinimum(int[] arr){
         int min = Integer.MAX_VALUE;
         int low = 0;
@@ -101,6 +115,11 @@ public class RotatedBinarySearch {
         return min;
     }
 
+    /**
+     * find the index of minimum value that will be the rotation count
+     * @param arr
+     * @return
+     */
     private static int rotationCount(int[] arr){
         int min = Integer.MAX_VALUE;
         int minIndex = -1;
