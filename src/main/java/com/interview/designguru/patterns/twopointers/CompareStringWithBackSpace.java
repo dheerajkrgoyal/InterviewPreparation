@@ -59,7 +59,12 @@ public class CompareStringWithBackSpace {
     }
 
 
-
+    /**
+     * find the valid index to compare
+     * @param str1
+     * @param str2
+     * @return
+     */
     private static boolean compare1(String str1, String str2){
         int index1 = str1.length()-1;
         int index2 = str2.length()-1;
@@ -77,12 +82,18 @@ public class CompareStringWithBackSpace {
             else if(str1.charAt(i1) != str2.charAt(i2) ){
                 return false;
             }
+
+            //done checking for the index >=i1 and i2
             index1 = i1-1;
             index2 = i2-1;
         }
         return true;
     }
 
+    //continue till index is not exhausted
+    //if char is backspace increase backspace count
+    //if not decrease the backspace count and ignore the char
+    //else return the index;
     private static int validChar(String str, int index){
         int bs = 0;
         while(index>=0){
