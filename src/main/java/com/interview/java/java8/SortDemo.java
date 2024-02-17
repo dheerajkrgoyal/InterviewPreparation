@@ -41,10 +41,13 @@ public class SortDemo {
         List<Integer> list = List.of(4,2,9,8,5,6);
         System.out.println("list: " + list);
 
-        list = list.stream().sorted().collect(Collectors.toList());
+        list = list.stream().sorted()
+                .collect(Collectors.toList());
         System.out.println("sorted list: " + list);
 
-        list = list.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+        list = list.stream()
+                .sorted(Comparator.reverseOrder())
+                .collect(Collectors.toList());
         System.out.println("reverse sorted: " + list);
 
         List<Employee> listOfEmployee = List.of(new Employee(1, "dheeraj"),
@@ -53,11 +56,15 @@ public class SortDemo {
                 new Employee(4, "ganesh"),
                 new Employee(8, "ayush"));
 
-        listOfEmployee = listOfEmployee.stream().sorted((a, b) -> a.id - b.id).collect(Collectors.toList());
+        listOfEmployee = listOfEmployee.stream()
+                .sorted((a, b) -> a.id - b.id)
+                .collect(Collectors.toList());
 
         System.out.println("sorted list of employee: " + listOfEmployee);
 
-        listOfEmployee = listOfEmployee.stream().sorted(Comparator.comparing(a->a.name)).collect(Collectors.toList());
+        listOfEmployee = listOfEmployee.stream()
+                .sorted(Comparator.comparing(a->a.name))
+                .collect(Collectors.toList());
         System.out.println(listOfEmployee);
 
         Map<String, Integer> map = Map.of("dheeraj", 1,
@@ -65,8 +72,13 @@ public class SortDemo {
                 "neha", 3,
                 "runit", 2);
 
-        map.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getValue)).forEach(System.out::println);
-        map.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(System.out::println);
+        map.entrySet().stream()
+                .sorted(Comparator.comparing(Map.Entry::getValue))
+                .forEach(System.out::println);
+
+        map.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .forEach(System.out::println);
 
         Map<Employee, Integer> mapOfObject = Map.of(new Employee(1, "dheeraj"), 1,
                 new Employee(5, "neha"), 5,
@@ -74,6 +86,8 @@ public class SortDemo {
                 new Employee(4, "ganesh"), 4,
                 new Employee(8, "ayush"), 8);
 
-        mapOfObject.entrySet().stream().sorted(Comparator.comparing(entry -> entry.getKey().name)).forEach(System.out::println);
+        mapOfObject.entrySet().stream()
+                .sorted(Comparator.comparing(entry -> entry.getKey().name))
+                .forEach(System.out::println);
     }
 }
