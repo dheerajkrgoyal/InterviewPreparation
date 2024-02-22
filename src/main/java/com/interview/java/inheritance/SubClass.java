@@ -30,7 +30,7 @@ public class SubClass extends SuperClass{
 
     @Override
     public void method(){
-        System.out.println("This is overriden subclass class method");
+        System.out.println("This is overriden subclass class method called from super class constructor");
     }
 
 
