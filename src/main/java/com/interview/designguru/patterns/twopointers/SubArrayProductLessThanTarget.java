@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * Given an array with positive numbers and a positive target number, find all of its contiguous
- * subarrays whose product is less than the target number.
+ * sub-arrays whose product is less than the target number.
  *
  * Input: [2, 5, 3, 10], target=30
  * Output: [2], [5], [2, 5], [3], [5, 3], [10]
