@@ -10,6 +10,7 @@ public class ParkingLotApp {
     public static void main(String[] args) {
         Vehicle vehicle = new Vehicle("WB02AH2453", VehicleType.FOUR_WHEELER);
         EntryGate.vehicleEntry(vehicle);
+
         ExitGate.vehicleExit(vehicle);
 
         Vehicle vehicle1 = new Vehicle("WB74P7654", VehicleType.TWO_WHEELER);
