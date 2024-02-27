@@ -15,7 +15,11 @@ public class EntryGate {
         ParkingSpotManagerFactory managerFactory = ParkingSpotManagerFactory.getInstance();
         ParkingSpotManager manager = managerFactory.getParkingSpotManager(vehicle);
         Optional<ParkingSpot> parkingSpot = manager.findParkingSpot(vehicle);
-        parkingSpot.ifPresent(spot -> vehicle.ticket = new Ticket(System.currentTimeMillis(), spot));
+        if(parkingSpot.isPresent()) {
+            Ticket ticket = new Ticket(System.currentTimeMillis(), parkingSpot.get());
+            vehicle.ticket = ticket;
+            manager.occupyParkingSpot(vehicle);
+        }
         return vehicle;
     }
 }

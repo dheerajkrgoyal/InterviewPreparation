@@ -19,4 +19,13 @@ public class ParkingSpotManager {
     public Optional<ParkingSpot> findParkingSpot(Vehicle vehicle){
         return findStrategy.findParkingSpot(vehicle, listOfParkingSpot);
     }
+
+    public boolean occupyParkingSpot(Vehicle vehicle){
+        vehicle.ticket.parkingSpot.isEmpty = false;
+        return true;
+    }
+    public boolean freeParkingSpot(Vehicle vehicle){
+        vehicle.ticket.parkingSpot.isEmpty = true;
+        return true;
+    }
 }

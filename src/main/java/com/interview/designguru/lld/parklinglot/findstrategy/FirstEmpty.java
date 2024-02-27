@@ -9,6 +9,6 @@ import java.util.Optional;
 public class FirstEmpty implements FindStrategy{
     @Override
     public Optional<ParkingSpot> findParkingSpot(Vehicle vehicle, List<ParkingSpot> listOfParkingSpot) {
-        return listOfParkingSpot.stream().filter(ps -> ps.isEmpty == false).findFirst();
+        return listOfParkingSpot.stream().filter(ps -> ps.isEmpty == true).findFirst();
     }
 }
