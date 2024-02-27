@@ -38,14 +38,14 @@ class PassengerVehicleStrategy extends VehicleStrategy{
 }
 
 class SportVehicleStrategy extends VehicleStrategy{
-    public SportVehicleStrategy(DriveStrategy driveStrategy){
+    public SportVehicleStrategy(){
         super(new SpecialDriveStrategy());
     }
 }
 
 class OffRoadVehicleStrategy extends VehicleStrategy{
-    public OffRoadVehicleStrategy(DriveStrategy driveStrategy){
-        super(driveStrategy);
+    public OffRoadVehicleStrategy(){
+        super(new SpecialDriveStrategy());
     }
 }
 

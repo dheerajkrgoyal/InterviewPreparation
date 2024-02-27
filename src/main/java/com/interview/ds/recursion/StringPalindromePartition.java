@@ -43,6 +43,6 @@ public class StringPalindromePartition {
 
     private static boolean isPalindrome(String s){
         StringBuilder sb = new StringBuilder(s);
-        return s.equals(sb.reverse().toString());
+        return s.contentEquals(sb.reverse());
     }
 }
