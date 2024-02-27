@@ -11,5 +11,9 @@ public class ParkingLotApp {
         Vehicle vehicle = new Vehicle("WB02AH2453", VehicleType.FOUR_WHEELER);
         EntryGate.vehicleEntry(vehicle);
         ExitGate.vehicleExit(vehicle);
+
+        Vehicle vehicle1 = new Vehicle("WB74P7654", VehicleType.TWO_WHEELER);
+        EntryGate.vehicleEntry(vehicle1);
+        ExitGate.vehicleExit(vehicle1);
     }
 }
