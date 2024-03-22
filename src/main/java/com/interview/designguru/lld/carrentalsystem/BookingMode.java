@@ -1,2 +1,6 @@
-package com.interview.designguru.lld.carrentalsystem;public class BookingMode {
+package com.interview.designguru.lld.carrentalsystem;
+
+public enum BookingMode {
+    HOUR,
+    DAY
 }

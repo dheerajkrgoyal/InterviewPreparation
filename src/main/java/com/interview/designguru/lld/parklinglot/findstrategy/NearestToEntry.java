@@ -11,6 +11,6 @@ public class NearestToEntry implements FindStrategy{
 
     @Override
     public Optional<ParkingSpot> findParkingSpot(Vehicle vehicle, List<ParkingSpot> listOfParkingSpot) {
-        return listOfParkingSpot.stream().filter(ps -> ps.isEmpty == true).findAny();
+        return listOfParkingSpot.stream().filter(ps -> ps.isEmpty).findAny();
     }
 }
