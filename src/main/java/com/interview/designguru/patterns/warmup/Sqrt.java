@@ -21,9 +21,14 @@ public class Sqrt {
         System.out.println(sqrt(8));
         System.out.println(sqrt(2));
         System.out.println(sqrt(4));
+        System.out.println(sqrt(0));
     }
 
     private static int sqrt(int x){
+        if(x == 0){
+            return 0;
+        }
+
         int low = 1;
         int high = x;
         int ans = 1;
