@@ -22,24 +22,28 @@ public class PermutationInString {
         }
         int left = 0;
         int right = 0;
+        int count = 0;
         while(right<str.length()){
             char c = str.charAt(right);
             if(map.containsKey(c)){
                 map.put(c, map.get(c)-1);
                 if(map.get(c) == 0){
-                    map.remove(c);
+                    count++;
                 }
             }
 
             if(right-left+1>pattern.length()){
                 char cr = str.charAt(left);
-                if(pattern.indexOf(cr) != -1){
+                if(map.containsKey(cr)){
+                    if(map.get(cr) == 0){
+                        count--;
+                    }
                     map.put(cr, map.getOrDefault(cr, 0) +1);
                 }
                 left++;
             }
 
-            if(right-left+1 == pattern.length() && map.size() == 0){
+            if(right-left+1 == pattern.length() && count == map.size()){
                 return true;
             }
             right++;
