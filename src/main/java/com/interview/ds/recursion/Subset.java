@@ -27,6 +27,7 @@ public class Subset {
     }
 
     //non-tail
+    @SuppressWarnings("unused")
     private static List<List<Integer>> subset(int[] arr, int i, List<Integer> currentList){
         List<List<Integer>> result = new ArrayList<>();
         if(i == arr.length){
@@ -45,6 +46,7 @@ public class Subset {
     }
 
     //tail
+    @SuppressWarnings("unused")
     private static void subset(int[] arr, int i, List<Integer> currentList, List<List<Integer>> result){
         if(i==arr.length){
             result.add(new ArrayList<>(currentList));

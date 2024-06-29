@@ -1,7 +1,7 @@
 package com.interview.designguru.lld.loggingsystem;
 
 public class ErrorLoggingProcessor extends LoggingProcessor{
-    public ErrorLoggingProcessor(LoggingProcessor nextLoggingProcessor, Class clazz) {
+    public ErrorLoggingProcessor(LoggingProcessor nextLoggingProcessor, @SuppressWarnings("rawtypes") Class clazz) {
         super(nextLoggingProcessor, clazz);
     }
 

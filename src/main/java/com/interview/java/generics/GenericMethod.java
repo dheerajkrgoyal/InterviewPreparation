@@ -1,6 +1,5 @@
 package com.interview.java.generics;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class GenericMethod {
@@ -11,7 +10,7 @@ public class GenericMethod {
         //list.add(3) //not valid
     }
 
-    public static void method1(List<? extends Comparable> list){
+    public static void method1(@SuppressWarnings("rawtypes") List<? extends Comparable> list){
         System.out.println("My method1: " + list);
     }
 

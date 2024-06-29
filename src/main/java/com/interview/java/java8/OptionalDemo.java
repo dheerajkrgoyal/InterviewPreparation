@@ -3,6 +3,7 @@ package com.interview.java.java8;
 import java.util.Optional;
 
 public class OptionalDemo {
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     public static void main(String[] args) {
 
         Optional emptyOptional = Optional.empty();

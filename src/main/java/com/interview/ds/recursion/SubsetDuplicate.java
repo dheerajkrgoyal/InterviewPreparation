@@ -15,6 +15,7 @@ public class SubsetDuplicate {
         System.out.println(result);
     }
 
+    @SuppressWarnings("unused")
     private static List<List<Integer>> subsetIteration(int[] arr){
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(arr);

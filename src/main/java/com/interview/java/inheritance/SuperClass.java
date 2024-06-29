@@ -1,7 +1,9 @@
 package com.interview.java.inheritance;
 
 public class SuperClass {
+    @SuppressWarnings("unused")
     private String instanceSuper = "instance variable super class";
+    @SuppressWarnings("unused")
     private String staticSuper = "static variable super class";
 
     static{

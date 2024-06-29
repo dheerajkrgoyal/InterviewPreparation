@@ -9,6 +9,7 @@ public class SubsetString {
         System.out.println(subsetTail("abc", "", new ArrayList<>()));
     }
 
+    @SuppressWarnings("unused")
     private static List<String> subset(String str, String ans){
         List<String> result = new ArrayList<>();
         if(str.isEmpty()) {

@@ -23,6 +23,7 @@ public class LeftRotateArray {
 
 
     //similar as one place instead of single variable we use array to hold the n elements
+    @SuppressWarnings("unused")
     private static void leftRotateNPlace(int[] arr, int n){
         n = n%arr.length;
         int[] temp = new int[n];

@@ -1,7 +1,6 @@
 package com.interview.java.java8;
 
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;

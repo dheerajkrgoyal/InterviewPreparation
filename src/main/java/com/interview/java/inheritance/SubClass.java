@@ -13,7 +13,9 @@ package com.interview.java.inheritance;
  * while calling method, super class will invoke subclass's overriden method
  */
 public class SubClass extends SuperClass{
+    @SuppressWarnings("unused")
     private String instanceSub = "instance variable sub class";
+    @SuppressWarnings("unused")
     private String staticSub = "static variable sub class";
 
     static{
@@ -35,6 +37,7 @@ public class SubClass extends SuperClass{
 
 
     public static void main(String[] args) {
+        @SuppressWarnings("unused")
         SubClass obj = new SubClass();
     }
 }

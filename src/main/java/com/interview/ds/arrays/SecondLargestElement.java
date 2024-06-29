@@ -7,6 +7,7 @@ public class SecondLargestElement {
     }
 
     //2 pass solution. we iterate through the array 2 times
+    @SuppressWarnings("unused")
     private static int secondLargest(int[] arr){
         int largest = Integer.MIN_VALUE;
         for(int i = 0; i<arr.length; i++){

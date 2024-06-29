@@ -3,7 +3,6 @@ package com.interview.designguru.patterns.mergeintervals;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.PriorityQueue;
 
 /**
  * Given a list of non-overlapping intervals sorted by their start time, insert a given interval at

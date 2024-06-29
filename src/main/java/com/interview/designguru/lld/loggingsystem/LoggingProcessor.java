@@ -1,6 +1,7 @@
 package com.interview.designguru.lld.loggingsystem;
 
 public abstract class LoggingProcessor {
+    @SuppressWarnings("rawtypes")
     Class clazz;
     public static final int INFO = 1;
     public static final int DEBUG = 2;
@@ -8,7 +9,7 @@ public abstract class LoggingProcessor {
 
     private LoggingProcessor nextLoggingProcessor;
 
-    public LoggingProcessor(LoggingProcessor nextLoggingProcessor, Class clazz){
+    public LoggingProcessor(LoggingProcessor nextLoggingProcessor, @SuppressWarnings("rawtypes") Class clazz){
         this.nextLoggingProcessor = nextLoggingProcessor;
         this.clazz = clazz;
     }

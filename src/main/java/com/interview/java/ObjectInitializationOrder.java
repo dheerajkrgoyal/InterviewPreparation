@@ -9,7 +9,9 @@ package com.interview.java;
  */
 public class ObjectInitializationOrder {
 
+    @SuppressWarnings("unused")
     private static String staticVariable= "static variable";
+    @SuppressWarnings("unused")
     private String instanceVariable = "instance variable";
     int[] arr = new int[5];
 
@@ -26,6 +28,7 @@ public class ObjectInitializationOrder {
     }
 
     public static void main(String[] args) {
+        @SuppressWarnings("unused")
         ObjectInitializationOrder object = new ObjectInitializationOrder();
         System.out.println("Hi I am main function");
     }

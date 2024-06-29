@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GenericExample {
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
 
         //We can store heterogeneous objects in collection

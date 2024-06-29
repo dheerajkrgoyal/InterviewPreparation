@@ -1,7 +1,7 @@
 package com.interview.designguru.lld.loggingsystem;
 
 public class DebugLoggingProcessor extends LoggingProcessor{
-    public DebugLoggingProcessor(LoggingProcessor nextLoggingProcessor, Class clazz) {
+    public DebugLoggingProcessor(LoggingProcessor nextLoggingProcessor, @SuppressWarnings("rawtypes") Class clazz) {
         super(nextLoggingProcessor, clazz);
     }
 

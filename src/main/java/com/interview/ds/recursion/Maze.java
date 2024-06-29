@@ -26,6 +26,7 @@ public class Maze {
     }
 
 
+    @SuppressWarnings("unused")
     private static List<String> maze2(int n, int r, int c, String ans){
         List<String> result = new ArrayList<>();
         if(r == n-1 && c == n-1){  //reached last cell
